@@ -1,37 +1,35 @@
 <?PHP 
 
 if(isset($_POST['submit'])){
-//if(isset($_POST['firstName'])&&isset($_POST['lastName'])&&isset($_POST['email'])){
-    $firstnmame= $_POST['firstName']; 
-    $lastname= $_POST['lastName']; 
-    $email= $_POST['email'];
+    $firstnmame = $_POST['firstName']; 
+    $lastname   = $_POST['lastName']; 
+    $email      = $_POST['email'];
 }
-else{
+else{ 
     $firstnmame ='';
     $lastname   ='';
     $email      ='';
 }
 
 $errors = [
-    'FirstnameError' => '',
-    'LastnameError' => '',
-    'EmailError' => '',
- ];
+    'FirstnameError'    => '',
+    'LastnameError'     => '',
+    'EmailError'        => '',
+    ];
 
 if(isset($_POST['submit'])){
 
     if(empty($firstnmame)){
         $errors['FirstnameError'] = 'First Name Empty';
-
-       }
-       if(empty($lastname)){
+        }
+        if(empty($lastname)){
         $errors['LastnameError'] ='last Name Empty';
-       }
-       if(empty($email)){
+        }
+        if(empty($email)){
         $errors['EmailError'] = 'Email  Empty';
-       }elseif(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+        }elseif(!filter_var($email,FILTER_VALIDATE_EMAIL)){
         $errors['EmailError'] = 'inpute reight Email';
-       }
+        }
 
     if(!array_filter($errors)){
 
@@ -47,6 +45,6 @@ if(isset($_POST['submit'])){
     } else{
         echo 'Error: ' . mysqli_errno($conn);
     }
-   
+
 }
 }

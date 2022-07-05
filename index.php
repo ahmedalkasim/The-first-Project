@@ -4,7 +4,6 @@ include './inc/form.php';
 include './inc/select.php';
 include './inc/db_close.php';
 
-
 ?>
 
 <?php include_once './parts/header.php';?>
@@ -27,7 +26,6 @@ include './inc/db_close.php';
               <li class="list-group-item">Lorem ipsum dolor sit amet, consetetur sadips</li>
               <li class="list-group-item">Lorem ipsum dolor sit amet, consetetur sadips</li>
               <li class="list-group-item">Lorem ipsum dolor sit amet, consetetur sadips</li>
-            
               </ul>
           </div>
 </div>
@@ -42,17 +40,17 @@ include './inc/db_close.php';
   <div class="mb-3">
     <label for="firstname" class="form-label">FirstName</label>
     <input type="text" name="firstName" class="form-control"  id="firstname" value="<?php echo $firstnmame;?>">
-    <div  class="form-text error"> <?php echo $errors['FirstnameError']?></div>
+    <div  class="form-text-error"> <?php echo $errors['FirstnameError']?></div>
   </div>
   <div class="mb-3">
     <label for="lastname" class="form-label">LastName</label>
     <input type="text" name="lastName" class="form-control"  id="lastname" value="<?php echo $lastname;  ?>">
-    <div  class="form-text error">  <?php echo $errors['LastnameError']?></div>
+    <div  class="form-text-error">  <?php echo $errors['LastnameError']?></div>
   </div>
   <div class="mb-3">
     <label for="email" class="form-label">Email</label>
     <input type="text" name="email" class="form-control"  id="email" value="<?php echo $email; ?>">
-    <div  class="form-text error">  <?php echo $errors['EmailError']?></div>
+    <div  class="form-text-error">  <?php echo $errors['EmailError']?></div>
   </div>
         
   <button type="submit" name="submit" class="btn btn-primary">Submit</button>
@@ -87,7 +85,7 @@ include './inc/db_close.php';
       <?php  foreach($users as $user):?>
         <h3 class="display-3 text-center modal-title" id="modalLabel"> <?php echo htmlspecialchars($user['firstName']) .' '.htmlspecialchars($user['lastName'])?></h3>
         <?php  endforeach ?>
-     
+
       </div>
       
     </div>

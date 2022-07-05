@@ -20,13 +20,13 @@ $errors = [
 if(isset($_POST['submit'])){
 
     if(empty($firstnmame)){
-        $errors['FirstnameError'] = 'First Name Empty';
+        $errors['FirstnameError'] = 'FirstName Empty';
         }
         if(empty($lastname)){
-        $errors['LastnameError'] ='last Name Empty';
+        $errors['LastnameError'] ='LastName Empty';
         }
         if(empty($email)){
-        $errors['EmailError'] = 'Email  Empty';
+        $errors['EmailError'] = 'EmailEmpty';
         }elseif(!filter_var($email,FILTER_VALIDATE_EMAIL)){
         $errors['EmailError'] = 'inpute reight Email';
         }
